@@ -16,6 +16,19 @@
 \usepackage{tabelas}
 \usepackage{versos}
 
+
+%------------------------------------------ INCLUIR EPIGRAFE EM PART
+\let\oldafterpartskip\afterpartskip 
+
+\newcommand\partepigraph[3][60pt]{
+\renewcommand{\afterpartskip}{
+\vskip#1
+\epigraph{#2}{#3}
+\vfil}
+}
+\newcommand\removeepigraph{
+  \let\afterpartskip\oldafterpartskip}
+%------------------------------------------
 \linespread{1.15}
 
 \setcounter{tocdepth}{1}     % amplitude da presença das partes no índice
