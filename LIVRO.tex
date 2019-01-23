@@ -16,6 +16,15 @@
 \usepackage{tabelas}
 \usepackage{versos}
 
+\usepackage{imakeidx} 
+\makeindex[program=xindy, options=-C utf8 -L portuguese]
+\newcommand\gobbleone[1]{}
+\newcommand*{\seeonly}[2]{\ (\emph{\seename} #1)}
+\newcommand*{\also}[2]{\emph{cf.} #1}
+\newcommand{\Also}[2]{\emph{See also} #1}
+\renewcommand\indexname{Índice onomástico}
+\makeindex[intoc]
+
 
 \addtocontents{toc}{\vskip-5pt}
 %------------------------------------------ INCLUIR EPIGRAFE EM PART
